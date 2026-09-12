@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fo">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Queen Machine · Við Tjarnir · 12. sept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#222E5B;
+    --red:#E23F1B;
+    --cream:#E7E6DC;
+    --bg:#E7E6DC;
+    --card:#ffffff;
+    --line:#d7d5c7;
+    --ink:#222E5B;
+    --muted:#6b7089;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:radial-gradient(circle at 90% 6%, rgba(226,63,27,.06), transparent 40%),radial-gradient(circle at 6% 4%, rgba(34,46,91,.05), transparent 38%)}
+  .wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 20px 80px}
+  header{padding:54px 0 30px;border-bottom:3px solid var(--navy)}
+  .kicker{font-family:'Inter',sans-serif;font-weight:600;color:var(--red);letter-spacing:.24em;font-size:12px;text-transform:uppercase;margin-bottom:14px}
+  h1{font-family:'Poppins',sans-serif;font-weight:800;color:var(--navy);font-size:clamp(44px,10vw,104px);line-height:.9;letter-spacing:-.01em;text-transform:uppercase}
+  h1 span{color:var(--red);display:block}
+  .sub{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:22px;color:var(--muted);font-family:'Inter',sans-serif;font-weight:500;font-size:14px}
+  .sub b{color:var(--navy)}
+  nav{position:sticky;top:0;z-index:20;background:rgba(231,230,220,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin:0 -20px 40px;padding:12px 20px}
+  nav .ni{display:flex;gap:8px;overflow-x:auto;max-width:1100px;margin:0 auto;-ms-overflow-style:none;scrollbar-width:none}
+  nav .ni::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;color:var(--navy);text-decoration:none;font-size:13px;font-weight:600;padding:7px 14px;border:1px solid var(--line);border-radius:999px;transition:.18s;background:var(--card)}
+  nav a:hover{color:#fff;border-color:var(--red);background:var(--red)}
+  .sec{margin-bottom:54px;scroll-margin-top:74px}
+  .sh{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+  .sh h2{font-family:'Poppins',sans-serif;font-weight:700;color:var(--navy);font-size:28px;text-transform:uppercase;letter-spacing:-.01em}
+  .sh .no{font-family:'Poppins',sans-serif;font-weight:700;color:var(--red);font-size:15px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+  .dept{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 14px rgba(34,46,91,.05)}
+  .dept h3{font-family:'Poppins',sans-serif;font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--navy);padding:11px 16px}
+  .dept.cr h3{background:var(--red);color:#fff}
+  .person{padding:14px 16px;border-top:1px solid var(--line)}
+  .person:first-of-type{border-top:none}
+  .person .nm{font-weight:700;font-size:16px;color:var(--navy)}
+  .person .role{color:var(--muted);font-size:13px;margin-top:1px}
+  .person .meta{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:8px;font-family:'Inter',sans-serif;font-weight:500;font-size:13px}
+  .person a{color:var(--red);text-decoration:none;font-weight:600}
+  .person a:hover{text-decoration:underline}
+  .note{color:var(--muted);font-size:12.5px;margin-top:7px;font-style:italic}
+  .empty{color:var(--muted);opacity:.55}
+  .tl{position:relative;padding-left:26px}
+  .tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .ev{position:relative;padding:0 0 22px 18px}
+  .ev::before{content:"";position:absolute;left:-26px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--navy)}
+  .ev.hot::before{background:var(--red);border-color:var(--red)}
+  .ev .t{font-family:'Poppins',sans-serif;font-weight:600;color:var(--navy);font-size:15px}
+  .ev.hot .t{color:var(--red)}
+  .ev .d{font-weight:600;font-size:17px;margin-top:2px;color:var(--navy)}
+  footer{text-align:center;color:var(--muted);font-family:'Inter',sans-serif;font-size:12px;padding-top:30px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Konsert · Epic Live · Við Tjarnir, Hoyvík</div>
+  <h1>Queen<span>Machine</span></h1>
+  <div class="sub">
+    <span>📅 <b>Leygardag 12. september</b></span>
+    <span>🚪 Dyrnar <b>19.30</b></span>
+    <span>🎤 Queen Machine <b>21.30</b></span>
+    <span>🆘 Neyðtilburður <b><a href="tel:112" style="color:var(--red)">112</a></b></span>
+  </div>
+</header>
+
+<nav><div class="ni">
+  <a href="#skra">Skráin</a>
+  <a href="#sambond">Sambond</a>
+  <a href="#noed">Neyðnummur</a>
+</div></nav>
+
+<!-- SKRÁIN -->
+<section class="sec" id="skra">
+  <div class="sh"><span class="no">01</span><h2>Skráin · Leygarkvøld</h2></div>
+  <div class="tl">
+    <div class="ev"><div class="t">19.30</div><div class="d">Dyrnar lata upp — stemningstónleikur av pallinum</div></div>
+    <div class="ev hot"><div class="t">20.30</div><div class="d">Moirae 🎸</div></div>
+    <div class="ev"><div class="t">21.15</div><div class="d">Steðgur</div></div>
+    <div class="ev hot"><div class="t">21.30</div><div class="d">Queen Machine — fyrsti partur 👑</div></div>
+    <div class="ev"><div class="t">22.15</div><div class="d">Steðgur</div></div>
+    <div class="ev hot"><div class="t">22.35</div><div class="d">Queen Machine — annar partur 👑</div></div>
+    <div class="ev"><div class="t">23.30</div><div class="d">Konsertin endar</div></div>
+  </div>
+</section>
+
+<!-- SAMBOND -->
+<section class="sec" id="sambond">
+  <div class="sh"><span class="no">02</span><h2>Sambond</h2></div>
+  <div class="grid">
+
+    <div class="dept cr">
+      <h3>Við Tjarnir</h3>
+      <div class="person">
+        <div class="nm">Regin W. Dalsgaard</div><div class="role">CEO</div>
+        <div class="meta"><a href="tel:596061">📞 59 60 61</a><a href="mailto:rwd@tjarnir.fo">✉ rwd@tjarnir.fo</a></div>
+      </div>
+    </div>
+
+    <div class="dept cr">
+      <h3>Fyriskipari · Epic Live</h3>
+      <div class="person">
+        <div class="nm">Jastrid</div><div class="role">Háldan</div>
+        <div class="meta"><a href="tel:280790">📞 28 07 90</a></div>
+      </div>
+      <div class="person">
+        <div class="nm">Tóki Skeel</div><div class="role">Háldan</div>
+        <div class="meta"><a href="tel:506050">📞 50 60 50</a></div>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3>Ljóð & Tøkni</h3>
+      <div class="person">
+        <div class="nm">Pól Holm</div><div class="role">Ljóðtøkningur / PA</div>
+        <div class="meta"><a href="tel:723329">📞 72 33 29</a></div>
+      </div>
+    </div>
+
+    <div class="dept cr">
+      <h3>Trygd</h3>
+      <div class="person">
+        <div class="nm">Irdi Neshamar</div><div class="role">Trygdarleiðari</div>
+        <div class="meta"><a href="tel:221118">📞 22 11 18</a></div>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3>Barrir & Matur/drekka</h3>
+      <div class="person">
+        <div class="nm">Heini</div><div class="role">Barrir</div>
+        <div class="meta"><a href="tel:587652">📞 58 76 52</a></div>
+      </div>
+      <div class="person">
+        <div class="nm">Jákup</div><div class="role">Barrir</div>
+        <div class="meta"><a href="tel:520390">📞 52 03 90</a></div>
+      </div>
+      <div class="person">
+        <div class="nm">Súsanna</div><div class="role">Barrir</div>
+        <div class="meta"><a href="tel:220484">📞 22 04 84</a></div>
+      </div>
+      <div class="person">
+        <div class="nm">Lena Maria</div><div class="role">Barrir</div>
+        <div class="meta"><a href="tel:225460">📞 22 54 60</a></div>
+      </div>
+      <div class="person">
+        <div class="nm">Lars</div><div class="role">Barrir · teknisk</div>
+        <div class="meta"><a href="tel:252893">📞 25 28 93</a></div>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3>Inngongd & atgongumerki</h3>
+      <div class="person">
+        <div class="nm">Háldan Haldansen</div><div class="role">Atgongumerki / skannarar</div>
+        <div class="meta"><a href="tel:280790">📞 28 07 90</a></div>
+      </div>
+      <div class="person">
+        <div class="nm">Tóki Skeel</div><div class="role">Atgongumerki / skannarar</div>
+        <div class="meta"><a href="tel:506050">📞 50 60 50</a></div>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3>Húsavørður</h3>
+      <div class="person">
+        <div class="nm">Herluf Jacobsen</div><div class="role">Húsavørður</div>
+        <div class="meta"><a href="tel:787587">📞 78 75 87</a></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NEYÐNUMMUR -->
+<section class="sec" id="noed">
+  <div class="sh"><span class="no">03</span><h2>Neyðnummur</h2></div>
+  <div class="grid">
+    <div class="dept cr">
+      <h3>Neyðtilburðir & tilbúgving</h3>
+      <div class="person"><div class="nm">Neyðsentalurin</div><div class="meta"><a href="tel:112">📞 112</a></div></div>
+      <div class="person"><div class="nm">Sløkkiliðið</div><div class="meta"><a href="tel:302100">📞 30 21 00</a></div></div>
+      <div class="person"><div class="nm">Løgreglan</div><div class="meta"><a href="tel:351448">📞 35 14 48</a></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>Queen Machine · Epic Live · Við Tjarnir · 12. september 2026 · Kunning til starvsfólk — verður dagførd</footer>
+
+</div>
+</body>
+</html>
